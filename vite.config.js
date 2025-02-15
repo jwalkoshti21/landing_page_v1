@@ -7,5 +7,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: '/landing_page_v1/',
+  base: './',
 })
