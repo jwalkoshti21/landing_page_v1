@@ -15,7 +15,7 @@ const SectionTwo = () => {
     },
     {
       id: 1,
-      name: "Fly Fishing Experiences",
+      name: "Fly Fishing \n Experiences",
       image: Assets.s22,
       mobileImage: Assets.s2m2,
       description:
@@ -32,14 +32,15 @@ const SectionTwo = () => {
   ];
 
   return (
-    <div className="bg-tan-lighter">
-      <div className="internal-wrapper flex flex-col justify-start items-start py-40 xs:py-80 px-24 gap-24">
-        {/* TITLE */}
-        <div className="font-default font-semibold text-headingDefault xs:text-headingMedium leading-[45px] xs:leading-[54px] text-neutral-90">
+    <div className="wrapper bg-tan-lighter py-40 md:py-80 px-24  gap-24 flex flex-col">
+      <div className="internal-wrapper">
+        <div className="font-default font-semibold text-headingDefault sm:text-headingMedium leading-[45px] sm:leading-[54px] text-neutral-90">
           Featured options
         </div>
+      </div>
+      <div className="internal-wrapper flex flex-col justify-start items-start mt-0 sm:mt-3 md:mt-0">
         {/* ACCORDION MOBILE*/}
-        <div className="w-full flex flex-col gap-24 xs:hidden">
+        <div className="w-full flex flex-col gap-24 sm:hidden">
           {accordionList.map((ac) => {
             return (
               <div
@@ -48,14 +49,14 @@ const SectionTwo = () => {
                 style={{ backgroundImage: `url(${ac.mobileImage})` }}
               >
                 {/* Content */}
-                <div className="relative z-10 flex flex-col justify-start p-32 xs:p-24 gap-8 items-start w-full h-full">
-                  <div className="font-default font-semibold text-[#1C1812] text-headingSmall leading-tight">
+                <div className="relative z-10 flex flex-col justify-start p-24 pr-32 gap-8 items-start w-full h-full">
+                  <div className="font-default font-semibold text-[#1C1812] text-headingSmall leading-[36px] sm:leading-[30px]">
                     {ac.name}
                   </div>
                   <p className="font-default font-normal text-neutral-60 text-bodyMedium leading-[30px]">
                     {ac.description}
                   </p>
-                  <span className="cursor-pointer px-12 xs:px-8 py-8 xs:py-4 bg-neutral-10 hover:bg-neutral-5 text-bodyDefault xs:text-bodySmall rounded-[4px] text-neutral-90 gap-8">
+                  <span className="cursor-pointer px-12 sm:px-8 py-8 sm:py-4 bg-neutral-10 hover:bg-neutral-5 text-bodyDefault sm:text-bodySmall rounded-[4px] text-neutral-90 gap-8">
                     Learn more
                   </span>
                 </div>
@@ -64,23 +65,23 @@ const SectionTwo = () => {
           })}
         </div>
         {/* ACCORDION DESKTOP*/}
-        <div className="w-full hidden xs:block">
+        <div className="w-full hidden sm:block">
           {accordionList.map((ac) => {
             const isSelected = ac.id === selected;
             return (
               <div key={ac.id} className="flex flex-col">
                 <div
                   onClick={() => onSelectHandler(ac.id)}
-                  className="flex flex-row justify-between items-center w-full border-b-[1px] border-neutral-40 py-8"
+                  className="flex flex-row justify-between items-center w-full border-b-[1px] border-neutral-40 py-[7.5px]"
                 >
                   <span className="font-default font-normal text-bodyMedium leading-[30px] text-center">
                     {ac.name}
                   </span>
-                  <span className="inline-block transition-transform duration-300 h-[9px] w-[17px]">
+                  <span className="flex items-center justify-center transition-transform duration-300 h-[24px] w-[24px] text-center">
                     <img
                       src={Assets.arrow}
                       alt="arrow"
-                      className={`w-6 h-6 transform ${
+                      className={`w-[16.5px] h-[9px] transform ${
                         isSelected ? "rotate-180" : ""
                       }`}
                     />
@@ -95,7 +96,10 @@ const SectionTwo = () => {
                   {isSelected && (
                     <div className="flex flex-row">
                       <div className="w-full max-w-[400px]">
-                        <img src={ac.image} className="w-full object-cover h-full" />
+                        <img
+                          src={ac.image}
+                          className="w-full object-cover h-full"
+                        />
                       </div>
                       <div className="flex flex-col justify-start p-24 gap-8 items-start">
                         <div className="font-default font-semibold text-[#1C1812] text-headingSmall leading-tight">

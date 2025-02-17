@@ -25,14 +25,14 @@ export default {
             tan: {
               lighter: '#f1ece1',
               light: '#e4d9c3',
-              DEFAULT: '#ddcfb4',
+              default: '#ddcfb4',
               dark: '#b1a690',
               darker: '#857c6c',
             },
             brown: {
               lighter: '#978f84',
               light: '#74695b',
-              DEFAULT: '#514432',
+              default: '#514432',
               dark: '#31291e',
               darker: '#201b14',
             },

@@ -6,11 +6,17 @@ body {
   font-family: "Inter";
 }
 
-.wrapper {
+.main-wrapper {
   max-width: 1440px;
   width: 100%;
   margin: 0px auto;
   min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0px auto;
 }
 
 .internal-wrapper {

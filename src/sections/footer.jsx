@@ -3,8 +3,8 @@ import { footerNav } from "../data/routes";
 
 const Footer = () => {
   return (
-    <div className="bg-neutral-90 w-full">
-      <div className="internal-wrapper p-24 flex flex-col gap-[36px]">
+    <div className="wrapper bg-neutral-90 w-full p-24 ">
+      <div className="internal-wrapper flex flex-col gap-[36px]">
         <div className="flex flex-col gap-8 xs:gap-0 xs:flex-row justify-between items-center w-full">
           {/* LOGO */}
           <div className="flex flex-col xs:flex-row justify-start items-center gap-8 xs:gap-24">
@@ -14,7 +14,7 @@ const Footer = () => {
                 return (
                   <div
                     style={{
-                      textUnderlineOffset: "2px",
+                      textUnderlineOffset: "2px", 
                     }}
                     className={`cursor-pointer font-default text-bodyDefault text-neutral-5`}
                     key={index}

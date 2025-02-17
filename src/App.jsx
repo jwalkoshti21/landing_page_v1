@@ -6,7 +6,7 @@ import SectionTwo from "./sections/section-two";
 
 function App() {
   return (
-    <div className="wrapper bg-neutral-0">
+    <div className="main-wrapper bg-neutral-0">
       <Header />
       <SectionOne />
       <SectionTwo />

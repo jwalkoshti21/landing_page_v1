@@ -11,10 +11,10 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className="xs:hidden h-40 flex items-center justify-center">
+      <div className="md:hidden h-40 flex items-center justify-center">
         <img src={Assets.ham} alt="ham" className="h-[24px]" />
       </div>
-      <div className="hidden xs:flex flex-row gap-6">
+      <div className="hidden md:flex flex-row gap-6">
         {mainNav.map((nav, index) => {
           const isSelected = nav.url == selected;
           const selectedClass = "underline decoration-2 decoration-[#1C1812]";
@@ -23,9 +23,9 @@ export const NavBar = () => {
             <div
               onClick={() => selectRouteHandler(nav.url)}
               style={{
-                textUnderlineOffset: "5px",
+                textUnderlineOffset: "8px",
               }}
-              className={`cursor-pointer font-default text-bodyDefault text-neutral-90 hover:underline decoration-2 hover:decoration-[#C6C5C3] ${
+              className={`cursor-pointer py-4 leading-6 font-default text-bodyDefault text-neutral-90 hover:underline decoration-2 hover:decoration-[#C6C5C3]  text-nowrap ${
                 isSelected ? selectedClass : notSelectedClass
               }`}
               key={index}
